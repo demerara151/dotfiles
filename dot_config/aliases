@@ -1,0 +1,19 @@
+alias hx='helix'
+alias cz='chezmoi'
+
+alias ls='lsd'
+alias ll='lsd -lA'
+
+alias cl='clear'
+alias ..='z ..'
+
+alias gs='git status --short --branch'
+alias ga='git add'
+alias gp='git push'
+alias gr='git remote -v'
+alias gb='git branch -av'
+alias gc='git commit -v'
+alias gd='git diff'
+alias gm='git merge '
+alias gsw='git switch '
+alias gl='git log --graph --oneline --decorate --all'
