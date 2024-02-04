@@ -1,0 +1,23 @@
+export EDITOR="helix"
+export VISUAL="helix"
+export _ZO_FZF_OPTS="--exact"
+export FZF_DEFAULT_COMMAND="fd --type file --color=always"
+export FZF_DEFAULT_OPTS="--ansi --layout=reverse --border=bold --preview='bat --color=always --number {}' --preview-window='right:50%,border-vertical'"
+
+source ~/.config/aliases
+
+rc () {
+  hx ~/.bashrc
+}
+
+function ya() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXX")"
+	yazi "$@" --cwd-file="$tmp"
+	if cwd="$(cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+		cd -- "$cwd"
+	fi
+	rm -f -- "$tmp"
+}
+
+eval "$(zoxide init bash)"
+eval "$(starship init bash)"
