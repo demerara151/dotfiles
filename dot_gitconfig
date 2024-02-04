@@ -1,0 +1,9 @@
+[init]
+	defaultBranch = main
+[user]
+	email = pinpinroku@tutanota.com
+	name = Gambling1594
+[commit]
+	template = ~/.gitmessage
+[fetch]
+	prune = true
